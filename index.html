@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Informe de peligro operaciones AGILL SAS</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main>
+            <section class="contenedor">
+                <img src="./Logo Agill.png" alt="Agill Logo" />
+                <form id="formulario-peligros">
+                    <h1>Informe de peligro de operaciones (IPO)</h1>
+
+                    <div class="field" style="display: none">
+                        <label class="label"></label>
+                        <input type="text" name="Fecha envio" id="fecha-envio" />
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Fecha del peligro</label>
+                        <input type="date" id="fecha" name="Fecha del peligro" required />
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Nombre</label>
+                        <input type="text" placeholder="Ej: Carlos Andres" id="nombre" name="Nombre" />
+                    </div>
+
+                    <div class="checkbox-grupo">
+                        <input type="checkbox" id="confidencial" />
+                        <label class="label">Confidencial</label>
+                    </div>
+
+                    <div class="field">
+                        <label for="label">Cargo</label>
+                        <input type="text" placeholder="Ej: Coordinador de operaciones" name="Cargo" id="cargo" />
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Descripción del peligro</label>
+                        <textarea
+                            name="Descripcion"
+                            id="descripcion"
+                            placeholder="Ej: Fallo en procedimiento"
+                        ></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="evidencia">Evidencia (PDF/imagen/video)</label>
+                        <input type="file" id="evidencia" name="Links" accept="*/*" />
+                    </div>
+
+                    <div class="checkbox-grupo">
+                        <input type="checkbox" id="accepto" required />
+                        <label for="acepto">He leído y acepto el uso y tratamiento de mis datos personales.</label>
+                    </div>
+
+                    <div class="buttons-field">
+                        <button type="submit" id="submit-btn">Enviar informe</button>
+                        <button class="cancel" id="cancel-btn">Reiniciar</button>
+                    </div>
+                </form>
+                <div id="message"></div>
+            </section>
+        </main>
+
+        <script src="./script.js" defer></script>
+    </body>
+</html>
